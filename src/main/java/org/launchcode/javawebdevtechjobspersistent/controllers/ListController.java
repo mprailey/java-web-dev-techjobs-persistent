@@ -49,12 +49,15 @@ public class ListController {
         Iterable<Job> jobs;
         jobs=jobRepository.findAll();
         model.addAttribute("jobs", jobs);
+
         Iterable<Employer> employers;
         employers=employerRepository.findAll();
         model.addAttribute("employers",employers );
+
         Iterable<Skill> skills;
         skills=skillRepository.findAll();
         model.addAttribute("skills",skills );
+
         return "list";
     }
 

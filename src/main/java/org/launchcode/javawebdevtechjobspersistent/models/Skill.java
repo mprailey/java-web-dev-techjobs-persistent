@@ -2,11 +2,13 @@ package org.launchcode.javawebdevtechjobspersistent.models;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
+import javax.validation.constraints.NotBlank;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 public class Skill extends AbstractEntity {
+    @NotBlank
     private String description;
 
     @ManyToMany(mappedBy="skills")
@@ -19,11 +21,11 @@ public class Skill extends AbstractEntity {
         this.description = description;
     }
 
-    public String getdescription() {
+    public String getDescription() {
         return description;
     }
 
-    public void setdescription(String description) {
+    public void setDescription(String description) {
         this.description = description;
     }
 
