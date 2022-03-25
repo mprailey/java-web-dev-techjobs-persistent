@@ -1,8 +1,6 @@
 package org.launchcode.javawebdevtechjobspersistent.controllers;
 
-import org.launchcode.javawebdevtechjobspersistent.models.Employer;
 import org.launchcode.javawebdevtechjobspersistent.models.Skill;
-import org.launchcode.javawebdevtechjobspersistent.models.data.EmployerRepository;
 import org.launchcode.javawebdevtechjobspersistent.models.data.SkillRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,9 +19,9 @@ public class SkillController {
     private SkillRepository skillRepository;
 
         @GetMapping
-        public String displayAllEvents(Model model) {
+        public String displayAllSkills(Model model) {
             model.addAttribute("title", "All Skills");
-            model.addAttribute("skill", skillRepository.findAll());
+            model.addAttribute("skills", skillRepository.findAll());
         return "skills/index";
          }
 
